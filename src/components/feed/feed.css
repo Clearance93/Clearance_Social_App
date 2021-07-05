@@ -1,0 +1,11 @@
+
+.feedbar{
+    flex: 8;
+    height: calc(100vh - 50px);
+    
+}
+
+
+.feedWrapper{
+    padding: 30px;
+}
