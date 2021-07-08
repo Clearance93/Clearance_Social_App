@@ -1,0 +1,92 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/src/pages/home/images/Full stack.jpg"); 
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+}
+
+
+.loginWrapper{
+    width: 70%;
+    height: 70%;
+    display: flex;
+}
+
+
+.loginLeft, .loginRight{
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginLogo{
+    font-size: 50px;
+    font-weight: 800;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.loginDesc{
+    font-size: 24px;
+}
+
+
+.loginBox{
+    height: 500px;
+    padding: 35px;
+    color: #fff;
+    /* background-color: #000; */
+    border-radius: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+
+.loginInput{
+    height: 50px;
+    border-radius: 10px;
+    border: 3px solid blue;
+    font-size: 20px;
+    padding-left: 25px;
+}
+
+.loginButton:focus{
+    outline: none;
+}
+
+
+.loginButton{
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: orange;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.forgotPassword{
+    text-align: center;
+    color: red;
+}
+
+.createNewAccount{
+    width: 60%;
+    align-self: center;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: orangered;
+    color: #fff;
+    font-weight: 560;
+    cursor: pointer;
+}

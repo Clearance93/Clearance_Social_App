@@ -31,3 +31,91 @@
     border-radius: 10px;
     margin: 40px 0px;
 }
+
+
+.rightBarFriendsList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.rightbarTitle{
+    margin-bottom: 20px;
+}
+
+.rightbarFriends{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.rightbarProfileImgContainer{
+    margin-right: 10px;
+    position: relative;
+}
+
+
+.rightbarProfileImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.rightbarOnline{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: lightgreen;
+    position: absolute;
+    top: -3px;
+    right: 10;
+    border: 2px solid white;
+}
+
+
+.rightBarUserName{
+    font-weight: 700;
+}
+
+
+.rightbarInfoItem{
+    margin-bottom: 10px;
+}
+
+.rightbarInfoValue{
+    font-weight: 330;
+}
+
+
+.rightinfoKey{
+    font-weight: 600;
+    margin-right: 15px;
+    color: #111;
+}
+
+.rightbarTitle{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+
+.rightbarFollowingImg{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.rightbarFollowings{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.rightbarFollowing{
+    display: flex;
+    flex-direction: column;
+}

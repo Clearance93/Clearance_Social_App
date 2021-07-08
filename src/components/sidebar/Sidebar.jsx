@@ -1,6 +1,8 @@
 
 import "./sidebar.css";
 import { Bookmarks, Chat, Event, Group, HelpOutlined, PlayCircleFilledOutlined, RssFeed, School, WorkOutline } from "@material-ui/icons";
+import { User } from "../../data";
+import CloseFirends from "../../components/Closefriends/CloseFriends"
 
 export default function Sidebar() {
     return (
@@ -47,70 +49,9 @@ export default function Sidebar() {
                <button className="sidebarButton">Show More</button>
                <hr  className="sidebarHr"/>
                <ul className="sidebarFriendList">
-                   <li className="sidebarFriend">
-                       <img src="/assets/IMG_20200515_182200.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Thango </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/IMG_20200521_104259.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Kutlwano </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/IMG_20200531_130755.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Thabiso </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/IMG_20210327_161939.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Martina </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/FB_IMG_15723530991882929.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Micheal </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/FB_IMG_15723530877787087.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Basetsana</span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/FB_IMG_15723528004325559.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Malokwane </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/FB_IMG_15723526254043868.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Precious </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/FB_IMG_15723524315984431.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Mohau </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/FB_IMG_15723524315984431.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Thoriso </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/FB_IMG_15723523863611853.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Thathi </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/FB_IMG_15723521854732527.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Doctor </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/FB_IMG_15723520484324532.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Tebogo </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/FB_IMG_15723520484324532.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Sebata </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/FB_IMG_15723528004325559.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Angela </span>
-                   </li>
-                   <li className="sidebarFriend">
-                       <img src="/assets/FB_IMG_15723520484324532.jpg" alt="First Friend" className="sidebarFriendName" />
-                       <span className="sidebarFriendName">Joy </span>
-                   </li>
+                  { User.map(u => (
+                      <CloseFirends key={u.id} user={u} />
+                  ))}
                </ul>
            </div>
         </div>
