@@ -9,8 +9,16 @@ export default function Post({post}) {
 
     const [like, setLike] = useState(post.like);
     const [heart, setHeart] = useState(post.heart);
-    const [isLiked, setIsLiked] = useState(false)
-    const [isHeart, setIsHeart] = useState(false)
+    const[joy, setJoy] = useState(post.joy);
+    const[broken, setBroken] = useState(post.broken);
+    const[fire, setFire] = useState(post.fire);
+
+
+    const [isLiked, setIsLiked] = useState(false);
+    const [isHeart, setIsHeart] = useState(false);
+    const [isJoy, setIsJoy] = useState(false);
+    const[isBroken, setIsBroken] = useState(false);
+    const[isFire, setIsFire] = useState(false);
 
 
     const likeHandler = () => {
@@ -18,9 +26,24 @@ export default function Post({post}) {
         setIsLiked(!isLiked)
     }
 
-  const heartHandler =() => {
+    const heartHandler =() => {
         setHeart(isHeart? heart-1 : heart+1)
         setIsHeart(!isHeart)
+    }
+
+    const tearsHandler = () => {
+        setJoy(isJoy? joy-1 : joy+1)
+        setIsJoy(!isJoy)
+    }
+
+    const sadHandler = () => {
+        setBroken(isBroken? broken-1 : broken+1)
+        setIsBroken(!isBroken)
+    }
+
+    const fireHandler = () => {
+        setFire(isFire? fire-1 : fire+1)
+        setIsFire(!isFire)
     }
 
     const user = User.filter(u => u.id === 1)
@@ -48,39 +71,24 @@ export default function Post({post}) {
                 <div className="postBottom">
                     <div className="postBottomLeft">
                         <img src="assets/imojies/heart.png" onClick={heartHandler}  alt="heart" className="imojiIcon" />
+                        <span className="postLikeCounter">{heart} loves</span>
                     </div>
                     <div className="postBottomLeft">
-                        <img src="assets/imojies/blush.png" onClick={likeHandler}  alt="blush" className="imojiIcon" />
+                        <img src="assets/imojies/broken.png" onClick={sadHandler}  alt="broken heart" className="imojiIcon" />
+                        <span className="postLikeCounter">{broken} heartbreak</span>
                     </div>
                     <div className="postBottomLeft">
-                        <img src="assets/imojies/broken-heart.png" onClick={likeHandler}  alt="broken heart" className="imojiIcon" />
+                        <img src="assets/imojies/fire.png" onClick={fireHandler}  alt="fire" className="imojiIcon" />
+                        <span className="postLikeCounter">{fire} hot</span>
                     </div>
                     <div className="postBottomLeft">
-                        <img src="assets/imojies/fire.png" onClick={likeHandler}  alt="fire" className="imojiIcon" />
-                    </div>
-                    <div className="postBottomLeft">
-                        <img src="assets/imojies/graving.png" onClick={likeHandler}  alt="graving" className="imojiIcon" />
-                    </div>
-                    <div className="postBottomLeft">
-                        <img src="assets/imojies/inlove.png" onClick={likeHandler}  alt="in love" className="imojiIcon" />
-                    </div>
-                    <div className="postBottomLeft">
-                        <img src="assets/imojies/laugh-out-load.png" onClick={likeHandler}  alt="laugh out load" className="imojiIcon" />
-                    </div>
-                    <div className="postBottomLeft">
-                        <img src="assets/imojies/much-of-love.png" onClick={likeHandler}  alt="much of love" className="imojiIcon" />
-                    </div>
-                    <div className="postBottomLeft">
-                        <img src="assets/imojies/sad.png" onClick={likeHandler}  alt="sad" className="imojiIcon" />
-                    </div>
-                    <div className="postBottomLeft">
-                        <img src="assets/imojies/tears-of-joy.png" onClick={likeHandler}  alt="tears of joy" className="imojiIcon" />
+                        <img src="assets/imojies/laugh.png" onClick={tearsHandler}  alt="laugh out load" className="imojiIcon" />
+                        <span className="postLikeCounter">{joy} LOL</span>
                     </div>
                     <div className="postBottomLeft">
                         <img src="assets/imojies/thurms-up.png" onClick={likeHandler} alt="thurms up" className="imojiIcon" />
+                        <span className="postLikeCounter">{like} likes</span>
                     </div>
-                    <span className="postLikeCounter">{like} likes</span>
-                    <span className="postLikeCounter">{heart} loves</span>
                     <div className="postBottomRight">
                         <span className="postCommenttext">{post.comments} comments</span>
                     </div>

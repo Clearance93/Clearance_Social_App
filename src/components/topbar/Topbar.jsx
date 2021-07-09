@@ -34,7 +34,7 @@ export default function Topbar(options) {
                         <span className="topbarIconBadge">120</span>
                     </div>
                 </div>
-                <img src="/assets/IMG_20200515_112608.jpg" alt="Clearance" className="topbarImg" />
+                <img src="/assets/Me again.jpg" alt="Clearance" className="topbarImg" />
             </div>
         </div>
     )
